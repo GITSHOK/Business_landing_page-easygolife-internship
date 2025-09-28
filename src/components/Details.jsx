@@ -11,11 +11,11 @@ function Details() {
     navigate('/Order');
   }
   
-  // Your services data (should be shared between components or fetched from API)
+
   const services = [
     {
       id: 1,
-      image: './images/pj.jpg',
+      image: '/images/pj.jpg',
       title: 'Private Jet Charter',
       description: 'Experience unparalleled luxury with our global fleet of meticulously maintained aircraft. From light jets to spacious VIP airliners.',
       features: ['Global Network', '24/7 Availability', 'Multiple Aircraft Categories'],
@@ -30,7 +30,7 @@ function Details() {
     },
     {
       id: 2,
-      image: './images/vip.jpeg',
+      image: '/images/vip.jpeg',
       title: 'VIP Concierge Service',
       description: 'Your dedicated personal concierge handles every detail - from ground transportation to luxury catering and hotel arrangements.',
       features: ['Personal Assistant', 'Custom Itineraries', 'Worldwide Support'],
@@ -45,7 +45,7 @@ function Details() {
     },
     {
       id: 3,
-      image: './images/corporate_service.jpeg',
+      image: '/images/corporate_service.jpeg',
       title: 'Corporate Solutions',
       description: 'Tailored aviation programs for businesses seeking efficiency, security, and premium travel experiences for executives.',
       features: ['Dedicated Account Manager', 'Volume Discounts', 'Custom Reporting'],

@@ -222,13 +222,13 @@
 .card-image-container {
   position: relative;
   overflow: hidden;
-  min-height: 250px; /* Ensure consistent height */
+  min-height: 250px;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This ensures images fill the container properly */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -243,10 +243,8 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), transparent);
-  opacity: 1; /* Changed from 0 to 1 to always show */
   transition: opacity 0.3s ease;
 }
-
 
 .luxury-card-landscape:hover .image-overlay {
   opacity: 1;
@@ -322,6 +320,7 @@
 .card-cta-landscape:hover .arrow-icon {
   transform: translateX(3px);
 }
+
 /* Partners Section */
 .partners {
   background: #0a0a0a;
@@ -465,42 +464,31 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .partners {
-    padding: 60px 0;
-  }
-  
-  .partners-container {
-    padding: 0 20px;
-  }
-  
-  .partners-header .section-title {
-    font-size: 2rem;
-  }
-  
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .partner-item {
-    padding: 20px 15px;
-  }
-  
-  .partner-icon {
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-  }
+/* Luxury divider for services */
+.luxury-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: #d4af37;
 }
 
-@media (max-width: 480px) {
-  .partners-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+/* Remove empty card-image div styles */
+.card-image-container .card-image:empty {
+  display: none;
 }
+
+/* Ensure images fill their containers properly */
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .luxury-card-landscape {
@@ -548,16 +536,79 @@
   .card-content-landscape {
     padding: 2rem;
   }
+  
+  /* Partners responsive */
+  .partners {
+    padding: 60px 0;
+  }
+  
+  .partners-container {
+    padding: 0 20px;
+  }
+  
+  .partners-header .section-title {
+    font-size: 2rem;
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .partner-item {
+    padding: 20px 15px;
+  }
+  
+  .partner-icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
 }
 
-/* Luxury divider */
-.luxury-services::before {
-  content: '';
+@media (max-width: 480px) {
+  .luxury-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .card-content-landscape {
+    padding: 1.5rem;
+  }
+}
+
+/* Additional image fixes */
+.card-image-container {
+  position: relative;
+}
+
+.card-image-container img {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 2px;
-  background: #d4af37;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fix for the fourth service image placeholder */
+.luxury-card-landscape:nth-child(4) .card-image-container {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.luxury-card-landscape:nth-child(4) .card-image-container::before {
+  content: '✈️';
+  font-size: 3rem;
+  opacity: 0.3;
 }

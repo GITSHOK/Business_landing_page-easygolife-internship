@@ -146,9 +146,6 @@ function Fleet() {
                 <button onClick={() => handleRequestCharter(aircraft)} className="inquiry-btn">
                   Request Charter
                 </button>
-                <button className="details-btn">
-                  View Details
-                </button>
               </div>
             </div>
           </div>
