@@ -1,0 +1,563 @@
+/* Home.css */
+.luxury-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+}
+
+.luxury-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.wing-icon {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.luxury-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.title-line {
+  display: block;
+  color: #ffffff;
+}
+
+.luxury-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-elegant {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.luxury-btn {
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-btn.primary {
+  background: #d4af37;
+  color: #0a0a0a;
+}
+
+.luxury-btn.primary:hover {
+  background: #f4d03f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.luxury-btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.luxury-btn.secondary:hover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.elegant-scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.scroll-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.gold-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, #d4af37, transparent);
+  margin: 0 auto;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Luxury Services Section */
+.luxury-services {
+  padding: 6rem 2rem;
+  background: #f8f8f8;
+  position: relative;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Landscape Cards */
+.services-grid-landscape {
+  display: grid;
+  gap: 2rem;
+}
+
+.luxury-card-landscape {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.luxury-card-landscape:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  border-color: #d4af37;
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px; /* Ensure consistent height */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures images fill the container properly */
+  transition: transform 0.3s ease;
+}
+
+.luxury-card-landscape:hover .card-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), transparent);
+  opacity: 1; /* Changed from 0 to 1 to always show */
+  transition: opacity 0.3s ease;
+}
+
+
+.luxury-card-landscape:hover .image-overlay {
+  opacity: 1;
+}
+
+.card-content-landscape {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title-landscape {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.card-description-landscape {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.features-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item-landscape {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.feature-icon {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.card-cta-landscape {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  padding: 0;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.card-cta-landscape:hover {
+  gap: 1.2rem;
+  color: #b8941f;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.card-cta-landscape:hover .arrow-icon {
+  transform: translateX(3px);
+}
+/* Partners Section */
+.partners {
+  background: #0a0a0a;
+  padding: 80px 0;
+  position: relative;
+}
+
+.partners::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.partners-header .section-label {
+  color: #d4af37;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.partners-header .section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.partners-header .section-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #b8b8b8;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.partner-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.partner-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+  padding: 15px;
+}
+
+.partner-item:hover .partner-icon {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: scale(1.1);
+}
+
+.partner-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(150%);
+  transition: all 0.3s ease;
+}
+
+.partner-item:hover .partner-icon img {
+  filter: grayscale(0%) brightness(100%);
+}
+
+.partner-name {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Luxury Divider */
+.partners-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.divider-line {
+  height: 1px;
+  width: 100px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.luxury-icon {
+  color: #d4af37;
+  font-size: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .partners {
+    padding: 60px 0;
+  }
+  
+  .partners-container {
+    padding: 0 20px;
+  }
+  
+  .partners-header .section-title {
+    font-size: 2rem;
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .partner-item {
+    padding: 20px 15px;
+  }
+  
+  .partner-icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+/* Responsive Design */
+@media (max-width: 968px) {
+  .luxury-card-landscape {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-hero {
+    min-height: 90vh;
+  }
+  
+  .luxury-title {
+    font-size: 2.5rem;
+  }
+  
+  .luxury-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .cta-elegant {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .luxury-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .luxury-services {
+    padding: 4rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .luxury-card-landscape {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 1fr;
+  }
+  
+  .card-content-landscape {
+    padding: 2rem;
+  }
+}
+
+/* Luxury divider */
+.luxury-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: #d4af37;
+}

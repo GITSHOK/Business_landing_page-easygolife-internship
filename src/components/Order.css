@@ -1,0 +1,311 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Order.css */
+.order-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.order-wrapper {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.order-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.order-header h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.order-header p {
+  color: #888;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.luxury-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.form-input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: #666;
+  font-weight: 300;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: #1f1f1f;
+}
+
+.passenger-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.passenger-btn {
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passenger-btn:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+.passenger-count {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  min-width: 40px;
+  text-align: center;
+}
+
+.booking-preview {
+  margin-top: 2rem;
+}
+
+.booking-preview h3 {
+  color: #d4af37;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+
+.preview-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.preview-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.preview-item:last-child {
+  border-bottom: none;
+}
+
+.preview-item strong {
+  color: #d4af37;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.preview-item span {
+  color: #fff;
+  font-weight: 300;
+}
+
+.contact-form-section {
+  margin-top: 3rem;
+}
+
+.section-divider {
+  position: relative;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+}
+
+.divider-text {
+  background: #0a0a0a;
+  padding: 0 1.5rem;
+  color: #d4af37;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Add to Order.css */
+
+/* Select dropdown styling */
+.form-input select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23d4af37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+.form-input select:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: #1f1f1f;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23d4af37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+.form-input select option {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+}
+
+.form-input select option:disabled {
+  color: #666;
+  font-style: italic;
+}
+
+.form-input select option:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* Ensure the select element takes full width */
+.form-input select {
+  width: 100%;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-container {
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+  
+  .order-wrapper {
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .order-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .preview-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .order-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .form-input {
+    padding: 0.8rem;
+  }
+}
